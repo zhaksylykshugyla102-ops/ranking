@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GradeSim Pro - Бағалау Жүйесі</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>📊 Мектеп Симуляторы</h1>
+            <p>Критериалды бағалау (20+20+50+10 = 100 балл)</p>
+        </header>
+
+        <div class="main-grid">
+            <div class="card input-card">
+                <h3><i class="icon">👤</i> Оқушы мәліметтері</h3>
+                <div class="input-group">
+                    <label>Оқушының аты-жөні</label>
+                    <input type="text" id="studentName" placeholder="Мысалы: Азамат Серік">
+                </div>
+                
+                <div class="grades-inputs">
+                    <div class="field">
+                        <label>БЖБ 1 (макс. 20)</label>
+                        <input type="number" id="sor1" max="20" min="0" value="0">
+                    </div>
+                    <div class="field">
+                        <label>БЖБ 2 (макс. 20)</label>
+                        <input type="number" id="sor2" max="20" min="0" value="0">
+                    </div>
+                    <div class="field">
+                        <label>ТЖБ (макс. 50)</label>
+                        <input type="number" id="soch" max="50" min="0" value="0">
+                    </div>
+                    <div class="field">
+                        <label>ФБ (макс. 10)</label>
+                        <input type="number" id="fb" max="10" min="0" value="0">
+                    </div>
+                </div>
+                <button onclick="calculateGrade()" class="btn-primary">Есептеу және Қосу</button>
+            </div>
+
+            <div class="card table-card">
+                <h3><i class="icon">📋</i> Сынып журналы</h3>
+                <div class="table-wrapper">
+                    <table id="gradeTable">
+                        <thead>
+                            <tr>
+                                <th>Оқушы</th>
+                                <th>БЖБ (40)</th>
+                                <th>ТЖБ (50)</th>
+                                <th>ФБ (10)</th>
+                                <th>Жалпы</th>
+                                <th>Баға</th>
+                            </tr>
+                        </thead>
+                        <tbody id="resultBody">
+                            </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
